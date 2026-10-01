@@ -1,0 +1,40 @@
+&CONTROL
+  calculation   = 'vc-relax'
+  prefix        = 'tio2'
+  outdir        = './tmp_tio2'
+  pseudo_dir    = './pseudo'
+  forc_conv_thr = 1.0d-3
+  etot_conv_thr = 1.0d-5
+/
+&SYSTEM
+  ibrav     = 0
+  nat       = 6
+  ntyp      = 2
+  ecutwfc   = 25.0
+  ecutrho   = 200.0
+/
+&ELECTRONS
+  conv_thr    = 1.0d-8
+  mixing_beta = 0.5
+/
+&IONS
+/
+&CELL
+  cell_dofree = 'ibrav'
+/
+ATOMIC_SPECIES
+  Ti  47.867  Ti.pz-sp-van_ak.UPF
+  O   15.999  O.pz-van_ak.UPF
+CELL_PARAMETERS angstrom
+  4.6500000000  0.0000000000  0.0000000000
+  0.0000000000  4.6500000000  0.0000000000
+  0.0000000000  0.0000000000  2.9800000000
+ATOMIC_POSITIONS crystal
+  Ti  0.000000  0.000000  0.000000
+  Ti  0.500000  0.500000  0.500000
+  O   0.300000  0.300000  0.000000
+  O   0.700000  0.700000  0.000000
+  O   0.800000  0.200000  0.500000
+  O   0.200000  0.800000  0.500000
+K_POINTS automatic
+  3 3 4 0 0 0
