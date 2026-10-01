@@ -1,0 +1,29 @@
+! Wurtzite ZnO at the experimental lattice: a = 3.2495 Å, c = 5.2069 Å, u = 0.3819
+&CONTROL
+  calculation = 'scf'
+  prefix      = 'zno'
+  pseudo_dir  = './pseudo'
+  outdir      = './tmp'
+/
+&SYSTEM
+  ibrav     = 4
+  celldm(1) = 6.140665
+  celldm(3) = 1.602370
+  nat       = 4
+  ntyp      = 2
+  ecutwfc   = 45.0
+  ecutrho   = 360.0
+/
+&ELECTRONS
+  conv_thr = 1.0d-9
+/
+ATOMIC_SPECIES
+  Zn  65.38   Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+  O   15.999  O.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+  Zn  1/3  2/3  0.0
+  Zn  2/3  1/3  1/2
+  O   1/3  2/3  0.3819
+  O   2/3  1/3  0.8819
+K_POINTS automatic
+  8 8 5 0 0 0
