@@ -1,0 +1,7 @@
+streamlit>=1.64
+pymatgen>=2024.6
+ase>=3.23
+numpy
+scipy
+pandas
+altair
